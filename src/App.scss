@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: 
+    
+        url('Gotham-Font/GothamBook.ttf'),
+        url('Gotham-Font/GothamLight.ttf');
+}
+
+$extra-light:  #f0f0f0;
+$light:  #e1e1e1;
+$medium-light:  #7a7979;
+$medium-dark:  #4d4c4c;
+$dark-color:  #474747;
+
+h1{
+  font-size: 2rem;
+  margin-bottom:0.3em;
+  font-weight: bold;
+  color:$dark-color;
+}
+
+.App {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'MyWebFont';
+  height:100vh;
+}
+
+.form-header{
+
+  margin: 1.7em 0;
+  margin-bottom: 3em;
+  p{
+    margin:0 0.2em;
+    color: $light;
+    font-size: 1.08rem;
+    
+  }
+
+}
+
+.signInBox{
+  width: 400px;
+  min-height:400px;
+  height: auto;
+  background-color:white;
+  box-shadow: 0 4px 8px 0 $extra-light, 0 6px 20px 0 $extra-light;
+  padding: 2.3em;
+}
+
+img{
+  margin-top: 0.9em;
+  width: 120px;
+}
+
+button{
+  background-color: white;
+  padding: 0.65em 1.7em;
+  border-radius: 0.5em;
+  margin-top: 2em;
+  border: solid 1px $light;
+  font-family: 'MyWebFont';
+  font-size:1.2em;
+  display: inline-block;
+
+  &:hover{
+    cursor:pointer;
+    background-color: $extra-light;
+
+  }
+}
+.hi{
+  display:grid
+
+}
+
+.email-label{
+  margin: 0.3em 0.2em;
+  color:$medium-dark;
+}
+
+
+#email{
+  border-radius:0.5em;
+  margin-top:0.4em;
+
+  padding: 1em;
+  border: solid 1px $light;
+  font-size:1rem;
+  
+}
+
+
+.rememberMe{
+  display: flex;
+  align-items:center;
+  margin: 1em -0.15em;
+
+  input{
+  height:1.5em;
+  width:1.5em;
+  border-radius: 2em;
+
+  border: solid 1px $light;
+  margin: -0.4em;
+
+
+
+
+  }
+  label{
+    color:$medium-dark;
+    margin:0 0.5em;
+    font-size: 0.8em
+  }
+}
+
+
+
+#rememberMe {
+  position: absolute;
+  opacity: 0;
+}
+#rememberMe + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+#rememberMe + label:before {
+  content: '';
+  margin-right: 10px;
+  margin-left: -10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border:1px solid $light;
+  border-radius:4px;
+}
+
+#rememberMe:focus + label:before {
+  box-shadow: none;
+}
+#rememberMe:checked + label:before {
+  background: #289ddf;
+  border:1px solid #289ddf;
+}
+#rememberMe:checked + label:after {
+  content: '';
+  position: absolute;
+  margin-left: -10px;
+  left: 6px;
+  top: 10px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
