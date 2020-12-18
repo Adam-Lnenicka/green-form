@@ -131,7 +131,6 @@ img {
 .rememberMe input:checked + label:after {
   content: '';
   position: absolute;
-  left: 1px;
   top: 9px;
   background: white;
   width: 2px;
@@ -167,10 +166,10 @@ button:hover {
     margin: 0;
   }
   .email label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .rememberMe label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .signInBox {
     padding: 1.8em;
