@@ -13,15 +13,14 @@ function App() {
 
       <form>
         
-        <label htmlFor="email" className="email-label">Email Address</label>
-        <br/>
-        <div className="hi">
-        <input type ="text" id="email"></input>
+        <div className="email">
+          <label htmlFor="email" >Email Address</label>
+          <input type ="text" id="email"></input>
         </div>
         
         <div className="rememberMe">
-        <input type ="checkbox" id="rememberMe" ></input>
-        <label htmlFor="rememberMe" >Remember this device</label>
+          <input type ="checkbox" id="rememberMe" ></input>
+          <label htmlFor="rememberMe" >Remember this device</label>
         </div>
 
       </form>
