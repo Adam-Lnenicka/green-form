@@ -92,10 +92,11 @@ img {
 }
 
 .rememberMe label {
-  color: #888888;
+  color: #474747;
   margin: 0 0.5em;
   margin-top: 8px;
   font-size: 0.8em;
+  letter-spacing: -0.4px;
 }
 
 .rememberMe input + label {
