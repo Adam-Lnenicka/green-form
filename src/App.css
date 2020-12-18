@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MyWebFont';
-  src: url("Gotham-Font/GothamBook.ttf"), url("Gotham-Font/GothamLight.ttf");
+  src: url("Gotham-Font/GothamBook.ttf") format("truetype"), url("Gotham-Font/GothamBook.eot") format("embedded-opentype"), url("Gotham-Font/GothamBook.woff") format("woff");
 }
 
 h1 {
@@ -31,9 +31,9 @@ h1 {
 }
 
 .form-header p {
-  margin: 0 0.3em;
+  margin: 0 0.2em;
   color: #b1b1b1;
-  font-size: 1.03rem;
+  font-size: 1.1rem;
   letter-spacing: -0.8px;
 }
 
@@ -49,23 +49,6 @@ h1 {
 img {
   margin-top: 0.9em;
   width: 120px;
-}
-
-button {
-  background-color: white;
-  color: #474747;
-  padding: 0.9em 2.1em;
-  border-radius: 0.5em;
-  margin-top: 2em;
-  border: solid 1px #e1e1e1;
-  font-family: 'MyWebFont';
-  font-size: 1em;
-  display: inline-block;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: #f0f0f0;
 }
 
 .email {
@@ -104,6 +87,8 @@ button:hover {
   border-radius: 2em;
   border: solid 1px #e1e1e1;
   margin: -0.4em;
+  position: absolute;
+  opacity: 0;
 }
 
 .rememberMe label {
@@ -111,11 +96,6 @@ button:hover {
   margin: 0 0.5em;
   margin-top: 8px;
   font-size: 0.8em;
-}
-
-.rememberMe input {
-  position: absolute;
-  opacity: 0;
 }
 
 .rememberMe input + label {
@@ -127,14 +107,13 @@ button:hover {
 .rememberMe input + label:before {
   content: '';
   margin-right: 10px;
-  margin-left: -5px;
-  margin-top: -3px;
+  margin-left: -4px;
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: middle;
   width: 20px;
   height: 20px;
   background: white;
-  border: 1px solid #cbcdcc;
+  border: 1px solid #e1e1e1;
   border-radius: 4px;
 }
 
@@ -151,14 +130,32 @@ button:hover {
 .rememberMe input:checked + label:after {
   content: '';
   position: absolute;
-  margin-left: -5px;
-  left: 6px;
+  left: 2px;
   top: 10px;
   background: white;
   width: 2px;
   height: 2px;
+  -webkit-box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+          box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+button {
+  background-color: white;
+  color: #474747;
+  padding: 0.9em 2.1em;
+  border-radius: 0.5em;
+  margin-top: 2em;
+  border: solid 1px #e1e1e1;
+  font-family: 'MyWebFont';
+  font-size: 1em;
+  display: inline-block;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
 }
 
 @media (max-width: 600px) {

@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'MyWebFont';
-  src:  url('Gotham-Font/GothamBook.ttf'),
-        url('Gotham-Font/GothamLight.ttf');
+  src:  url('Gotham-Font/GothamBook.ttf')format('truetype'),
+        url('Gotham-Font/GothamBook.eot')format('embedded-opentype'),
+        url('Gotham-Font/GothamBook.woff')format('woff');     
 }
 
 $extra-light:  #f0f0f0;
@@ -27,18 +28,16 @@ h1{
   height:100vh;
 }
 
-
 .form-header{
 
   margin: 1.7em 0;
   margin-bottom: 3em;
   p{
-    margin:0 0.3em;
+    margin:0 0.2em;
     color: $medium-light;
-    font-size: 1.03rem;  
+    font-size: 1.1rem;  
     letter-spacing: -0.8px;
   }
-
 }
 
 .signInBox{
@@ -54,54 +53,41 @@ img{
   width: 120px;
 }
 
-button{
-  background-color: white;
-  color:$dark;
-  padding: 0.9em 2.1em;
-  border-radius: 0.5em;
-  margin-top: 2em;
-  border: solid 1px $light;
-  font-family: 'MyWebFont';
-  font-size:1em;
-  display: inline-block;
-    &:hover{
-      cursor:pointer;
-      background-color: $extra-light;
 
-    }
-}
 .email{
   display:grid;
-    label{
-      margin: 0em 0.2em;
-      color:$medium-dark;
-      letter-spacing: -0.7px;
-    }
-    input{
-      border-radius:0.5em;
-      margin-top:0.3em;
-      padding: 1em;
-      border: solid 1px $light;
-      font-size:1rem; 
-      color:$dark; 
-    }
+  label{
+    margin: 0em 0.2em;
+    color:$medium-dark;
+    letter-spacing: -0.7px;
+  }
+  input{
+    border-radius:0.5em;
+    margin-top:0.3em;
+    padding: 1em;
+    border: solid 1px $light;
+    font-size:1rem; 
+    color:$dark; 
+  }
 
 }
+
+//Checkbox input
 
 .rememberMe{
   display: flex;
   align-items:center;
   margin: 0.6em -0.15em;
-
   input{
   height:1.5em;
   width:1.5em;
   border-radius: 2em;
-
   border: solid 1px $light;
   margin: -0.4em;
-
+  position: absolute;
+  opacity: 0;
   }
+
   label{
     color:$medium-dark;
     margin:0 0.5em;
@@ -109,10 +95,6 @@ button{
     font-size: 0.8em
   }
 
-  input {
-    position: absolute;
-    opacity: 0;
-  }
   input + label {
     position: relative;
     cursor: pointer;
@@ -120,18 +102,16 @@ button{
     &:before {
       content: '';
       margin-right: 10px;
-      margin-left: -5px;
-      margin-top:-3px;
+      margin-left: -4px;
       display: inline-block;
-      vertical-align: text-top;
+      vertical-align: middle;
       width: 20px;
       height: 20px;
       background: white;
-      border:1px solid #cbcdcc;
+      border:1px solid $light;
       border-radius:4px;
     }
   }
-  
 
   input:focus + label:before {
     box-shadow: none;
@@ -143,18 +123,39 @@ button{
   input:checked + label:after {
     content: '';
     position: absolute;
-    margin-left: -5px;
-    left: 6px;
+    left: 2px;
     top: 10px;
     background: white;
     width: 2px;
     height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
 
 }
 
+//Button
+
+button{
+  background-color: white;
+  color:$dark;
+  padding: 0.9em 2.1em;
+  border-radius: 0.5em;
+  margin-top: 2em;
+  border: solid 1px $light;
+  font-family: 'MyWebFont';
+  font-size:1em;
+  display: inline-block;
+  &:hover{
+    cursor:pointer;
+    background-color: $extra-light;
+
+  }
+}
+
+
+//Responsiveness
 
 @media (max-width:600px){
   .form-header{
