@@ -11,7 +11,7 @@ h1 {
 }
 
 .App {
-  background-color: #f0f0f0;
+  background-color: #f8f8f8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,15 +57,15 @@ img {
 }
 
 .email label {
-  margin: 0em 0.2em;
+  margin: 0.1em 0.2em;
   color: #888888;
   letter-spacing: -0.7px;
 }
 
 .email input {
   border-radius: 0.5em;
-  margin-top: 0.3em;
-  padding: 1em;
+  margin-top: 0.4em;
+  padding: 0.7em;
   border: solid 1px #e1e1e1;
   font-size: 1rem;
   color: #474747;
@@ -111,8 +111,8 @@ img {
   margin-left: -4px;
   display: inline-block;
   vertical-align: middle;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   background: white;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
@@ -131,8 +131,8 @@ img {
 .rememberMe input:checked + label:after {
   content: '';
   position: absolute;
-  left: 2px;
-  top: 10px;
+  left: 1px;
+  top: 9px;
   background: white;
   width: 2px;
   height: 2px;
@@ -156,7 +156,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #f0f0f0;
+  background-color: #f8f8f8;
 }
 
 @media (max-width: 600px) {

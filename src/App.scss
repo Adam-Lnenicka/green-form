@@ -5,7 +5,7 @@
         url('Gotham-Font/GothamBook.woff')format('woff');     
 }
 
-$extra-light:  #f0f0f0;
+$extra-light:  #f8f8f8;
 $light:  #e1e1e1;
 $medium-light:  #b1b1b1;
 $medium-dark:  #888888;
@@ -57,14 +57,14 @@ img{
 .email{
   display:grid;
   label{
-    margin: 0em 0.2em;
+    margin: 0.1em 0.2em;
     color:$medium-dark;
     letter-spacing: -0.7px;
   }
   input{
     border-radius:0.5em;
-    margin-top:0.3em;
-    padding: 1em;
+    margin-top:0.4em;
+    padding: 0.7em;
     border: solid 1px $light;
     font-size:1rem; 
     color:$dark; 
@@ -106,8 +106,8 @@ img{
       margin-left: -4px;
       display: inline-block;
       vertical-align: middle;
-      width: 20px;
-      height: 20px;
+      width: 17px;
+      height: 17px;
       background: white;
       border:1px solid $light;
       border-radius:4px;
@@ -124,8 +124,8 @@ img{
   input:checked + label:after {
     content: '';
     position: absolute;
-    left: 2px;
-    top: 10px;
+    left: 1px;
+    top: 9px;
     background: white;
     width: 2px;
     height: 2px;
@@ -133,7 +133,6 @@ img{
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
-
 }
 
 //Button
