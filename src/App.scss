@@ -124,6 +124,7 @@ img{
   input:checked + label:after {
     content: '';
     position: absolute;
+    left: 0px;
     top: 9px;
     background: white;
     width: 2px;
@@ -167,13 +168,13 @@ button{
 
   .email{
     label{
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
   }
 
   .rememberMe{
     label{
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
   }
 
